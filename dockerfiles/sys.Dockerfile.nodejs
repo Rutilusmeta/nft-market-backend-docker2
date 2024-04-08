@@ -1,0 +1,35 @@
+#!/bin/bash
+
+ARG DOCKER_IMAGE
+
+FROM ${DOCKER_IMAGE}
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
+	apt-get install -yq apt-utils nano curl && \
+	apt-get install -y tzdata && \
+	apt-get install -y nodejs && \
+	apt-get install -y npm && \ 
+	apt-get install -y procps
+
+COPY scripts/sys.run.sh .
+
+RUN chmod +x sys.run.sh
+
+ARG WORK_DIR
+
+WORKDIR ${WORK_DIR}
+
+ARG VOLUME
+
+# Copy package.json and package-lock.json (if exists) to the Docker image
+COPY ${VOLUME}/package.json .
+COPY ${VOLUME}package-lock.json* ./
+
+# Install npm dependencies
+RUN npm install
+
+#RUN npm start
+
+COPY . .
+
+CMD [ "/bin/sh", "/sys.run.sh" ]
