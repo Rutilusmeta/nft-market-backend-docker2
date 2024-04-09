@@ -1,4 +1,6 @@
 volume
+logs/*
+!logs/.gitkeep
 .env
 dockerfiles/*
 !dockerfiles/sys.*
