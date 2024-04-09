@@ -1,4 +1,4 @@
-# DOCKER IMAGE FOR NFT MARKET BACKEND
+# DOCKER IMAGE FOR NFT MARKET API
 
 Docker environment for nft market api
 
