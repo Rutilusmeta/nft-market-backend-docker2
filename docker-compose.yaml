@@ -28,22 +28,14 @@ services:
     - "DOCKER_IMAGE=${DOCKER_IMAGE}"
     - "WORK_DIR=${WORK_DIR}"
     - "TZ=${TIMEZONE}"
-    - "HOST=${NODEJS_ADDRESS}"
-    - "PORT=${NODEJS_PORT}"
-    - "DB_HOST=${DB_HOST}"
-    - "DB_USER=${DB_USER}"
-    - "DB_PASSWORD=${DB_PASSWORD}"
-    - "DB_NAME=${DB_NAME}"
-    - "TIMEOUT=${TIMEOUT}"
-    - "PARTICLE_AUTHORIZATION_URL=${PARTICLE_AUTHORIZATION_URL}"
-    - "PARTICLE_PROJECT_ID=${PARTICLE_PROJECT_ID}"
-    - "PARTICLE_CLIENT_KEY=${PARTICLE_CLIENT_KEY}"
+    - "SERVICE_PORT=${SERVICE_PORT}"
+    - "SERVICE_ADDRESS=${SERVICE_ADDRESS}"
     logging:
       driver: "${LOG_DRIVER}"
       options:
         tag: "{{.Name}}"
     ports:
-      - "127.0.0.1:${NODEJS_PORT}:${NODEJS_PORT}"
+      - "127.0.0.1:${SERVICE_PORT}:${SERVICE_PORT}"
 networks:
   nft-market:
     name: nft-market
