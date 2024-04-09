@@ -2,6 +2,19 @@
 
 Docker environment for nft market nodejs
 
+Backend API:
+https://github.com/ground-creative/nft-market-backend
+
+Backend Docker:
+https://github.com/ground-creative/nft-market-backend-docker
+
+Frontend React:
+https://github.com/Rutilusmeta/nft-market-frontend
+
+Frontend Docker:
+https://github.com/ground-creative/nft-market-frontend-docker
+
+
 ## Installation
 
 1) Clone the repository
