@@ -1,6 +1,6 @@
 # DOCKER IMAGE FOR NFT MARKET BACKEND
 
-Docker environment for nft market nodejs
+Docker environment for nft market api
 
 Backend API:
 https://github.com/ground-creative/nft-market-backend
