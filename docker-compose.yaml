@@ -40,4 +40,3 @@ networks:
   nft-market:
     name: nft-market
     external: true
-    
