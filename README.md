@@ -33,7 +33,12 @@ https://github.com/ground-creative/nft-market-docker-nginx
 git clone https://github.com/ground-creative/nft-market-backend-docker
 ```
 
-2) Change environment variables in env.sample file and rename it to .env
+2) Create a folder named volume and store your code there
+```
+mkdir volume
+```
+
+3) Change environment variables in env.sample file and rename it to .env
 
 ## Usage
 
